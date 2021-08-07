@@ -7,6 +7,10 @@ export default function Layout({ children }) {
 			let isOn = localStorage.getItem("darkThemeOn") === "true";
 			if (typeof document !== "undefined") {
 				document.body.style.background = isOn ? "#0f0f0f" : "#fafafa";
+				if (isOn) {
+					let darkThemeElement = document.getElementById("dark-theme");
+					darkThemeElement.classList.add("dark");
+				}
 			}
 			return isOn;
 		} else {
@@ -29,7 +33,7 @@ export default function Layout({ children }) {
 
 	return (
 		<>
-			<div className={` ${darkThemeOn ? "dark" : ""}`}>
+			<div className={` ${darkThemeOn ? "dark" : ""}`} id="dark-theme">
 				<ThemeToggle onToggle={handleToggleDarkTheme} darkThemeOn={darkThemeOn} />
 				<main className="transition-colors text-black dark:text-white">
 					<div>{children}</div>
