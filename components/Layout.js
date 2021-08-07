@@ -5,11 +5,12 @@ export default function Layout({ children }) {
 	const [darkThemeOn, setDarkThemeOn] = useState(() => {
 		if (typeof window !== "undefined") {
 			let isOn = localStorage.getItem("darkThemeOn") === "true";
-			if (isOn) {
-				document.body.style.background = "#0f0f0f";
+			if (typeof document !== "undefined") {
+				document.body.style.background = isOn ? "#0f0f0f" : "#fafafa";
 			}
 			return isOn;
 		} else {
+			if (typeof document !== "undefined") document.body.style.background = "#fafafa";
 			return false;
 		}
 	});

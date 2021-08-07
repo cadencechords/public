@@ -12,7 +12,7 @@ export default function ThemeToggle({ darkThemeOn, onToggle }) {
 			onClick={onToggle}
 		>
 			{darkThemeOn ? (
-				<MoonIcon className="w-6 text-gray-50" />
+				<MoonIcon className="w-6 text-gray-100" />
 			) : (
 				<SunIcon className="w-6 text-blue-800" />
 			)}
