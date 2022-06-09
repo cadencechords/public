@@ -14,7 +14,14 @@ export default function Setlist({ setlist }) {
     return (
       <>
         <Head>
-          <title>Songs</title>
+          <title>Songs | Cadence</title>
+          <meta property="og:title" content="Songs | Cadence"></meta>
+          <meta
+            property="og:image"
+            content="https://public.cadencechords.com/logo.png"
+          ></meta>
+          <meta property="og:image:width" content="968"></meta>
+          <meta property="og:image:height" content="504"></meta>
         </Head>
         <SetlistDisplay setlist={setlist} />
       </>
