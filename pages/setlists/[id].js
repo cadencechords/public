@@ -20,8 +20,8 @@ export default function Setlist({ setlist }) {
             property="og:image"
             content="https://public.cadencechords.com/logo.png"
           ></meta>
-          <meta property="og:image:width" content="968"></meta>
-          <meta property="og:image:height" content="504"></meta>
+          <meta property="og:image:width" content="579"></meta>
+          <meta property="og:image:height" content="773"></meta>
         </Head>
         <SetlistDisplay setlist={setlist} />
       </>
