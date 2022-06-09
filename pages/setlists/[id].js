@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import SetlistDisplay from '../../components/SetlistDisplay';
 
@@ -10,7 +11,14 @@ export default function Setlist({ setlist }) {
   } else if (!setlist) {
     return <div>Could not find that setlist</div>;
   } else {
-    return <SetlistDisplay setlist={setlist} />;
+    return (
+      <>
+        <Head>
+          <title>Songs</title>
+        </Head>
+        <SetlistDisplay setlist={setlist} />
+      </>
+    );
   }
 }
 
