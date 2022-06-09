@@ -4,7 +4,7 @@ import ArrowNarrowRightIcon from '@heroicons/react/outline/ArrowNarrowRightIcon'
 export default function SetlistNavigation({ songs, onIndexChange, index }) {
   return (
     <>
-      <div className="fixed bottom-0 w-full flex border-t dark:border-dark-gray-600 bg-white dark:bg-dark-gray-900 h-12">
+      <div className="fixed bottom-0 w-full flex border-t dark:border-dark-gray-600 bg-white dark:bg-dark-gray-900 h-12 text-sm">
         <button
           disabled={index === 0}
           onClick={() => onIndexChange(index - 1)}
