@@ -30,10 +30,10 @@ export default function Setlist({ setlist }) {
 }
 
 export async function getStaticProps(props) {
-  const params = props.params;
+  const { id } = props.params;
 
   try {
-    const result = await axios.get(`${API_URL}/public_setlists/${params.id}`);
+    const result = await axios.get(`${API_URL}/public_setlists/${id}`);
     const setlist = result.data;
     return { props: { setlist } };
   } catch (error) {
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
   const setlists = result.data;
 
   const paths = setlists?.map(setlist => ({
-    params: { id: setlist.code },
+    params: { id: setlist.public_link },
   }));
 
   return { paths, fallback: true };

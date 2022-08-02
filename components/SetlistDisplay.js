@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function SetlistDisplay({ setlist }) {
   const [songIndex, setSongIndex] = useState(0);
   function buildTemplates() {
-    return setlist?.songs?.map(song => <Song song={song} key={song} />);
+    return setlist?.songs?.map(song => <Song song={song} key={song.id} />);
   }
 
   if (setlist) {
