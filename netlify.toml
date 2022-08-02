@@ -1,0 +1,5 @@
+[context.production.environment]
+API_URL           = "https://chords-api.herokuapp.com"
+
+[context.dev.environment]
+API_URL           = "https://chords-api-dev.herokuapp.com"
