@@ -12,6 +12,7 @@ export default function Setlist({ setlist }) {
   } else if (!setlist) {
     return <div>Could not find that setlist</div>;
   } else {
+    console.log('Here');
     return (
       <>
         <Head>
