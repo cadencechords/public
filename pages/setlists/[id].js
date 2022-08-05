@@ -31,12 +31,14 @@ export default function Setlist({ setlist }) {
 
 export async function getStaticProps(props) {
   const { id } = props.params;
-
+  console.log({ id });
   try {
     const result = await axios.get(`${API_URL}/public_setlists/${id}`);
+    console.log({ result });
     const setlist = result.data;
     return { props: { setlist } };
   } catch (error) {
+    console.log({ error: JSON.stringify(error) });
     return { props: { setlist: null } };
   }
 }
@@ -49,7 +51,6 @@ export async function getStaticPaths() {
     params: { id: setlist.public_link },
   }));
 
-  console.log({ paths: JSON.stringify(paths) });
   return { paths, fallback: true };
 }
 
