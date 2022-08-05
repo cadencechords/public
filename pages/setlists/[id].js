@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import SetlistDisplay from '../../components/SetlistDisplay';
 
 export default function Setlist({ setlist }) {
+  console.log({ setlist });
   const router = useRouter();
 
   if (router.isFallback) {
@@ -31,14 +32,11 @@ export default function Setlist({ setlist }) {
 
 export async function getStaticProps(props) {
   const { id } = props.params;
-  console.log({ id });
   try {
     const result = await axios.get(`${API_URL}/public_setlists/${id}`);
-    console.log({ result: result.data });
     const setlist = result.data;
     return { props: { setlist } };
   } catch (error) {
-    console.log({ error: JSON.stringify(error) });
     return { props: { setlist: null } };
   }
 }
