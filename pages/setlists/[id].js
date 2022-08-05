@@ -45,12 +45,11 @@ export async function getStaticPaths() {
   const result = await axios.get(API_URL + '/public_setlists');
   const setlists = result.data;
 
-  console.log({ setlists });
   const paths = setlists?.map(setlist => ({
     params: { id: setlist.public_link },
   }));
 
-  console.log({ paths });
+  console.log({ paths: JSON.stringify(paths) });
   return { paths, fallback: true };
 }
 
