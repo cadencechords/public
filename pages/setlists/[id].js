@@ -34,7 +34,7 @@ export async function getStaticProps(props) {
   console.log({ id });
   try {
     const result = await axios.get(`${API_URL}/public_setlists/${id}`);
-    console.log({ result });
+    console.log({ result: result.data });
     const setlist = result.data;
     return { props: { setlist } };
   } catch (error) {
