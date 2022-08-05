@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import SetlistDisplay from '../../components/SetlistDisplay';
 
 export default function Setlist({ setlist }) {
-  console.log({ setlist });
   const router = useRouter();
 
   if (router.isFallback) {
@@ -12,7 +11,6 @@ export default function Setlist({ setlist }) {
   } else if (!setlist) {
     return <div>Could not find that setlist</div>;
   } else {
-    console.log('Here');
     return (
       <>
         <Head>
@@ -36,7 +34,7 @@ export async function getStaticProps(props) {
   try {
     const result = await axios.get(`${API_URL}/public_setlists/${id}`);
     const setlist = result.data;
-    return { props: { setlist } };
+    return { props: { setlist }, revalidate: 10 };
   } catch (error) {
     return { props: { setlist: null } };
   }
@@ -50,7 +48,7 @@ export async function getStaticPaths() {
     params: { id: setlist.public_link },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 }
 
 const API_URL = process.env.API_URL;
