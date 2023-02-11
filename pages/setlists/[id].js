@@ -29,26 +29,16 @@ export default function Setlist({ setlist }) {
   }
 }
 
-export async function getStaticProps(props) {
+export async function getServerSideProps(props) {
   const { id } = props.params;
   try {
     const result = await axios.get(`${API_URL}/public_setlists/${id}`);
-    const setlist = result.data;
-    return { props: { setlist }, revalidate: 10 };
+    let setlist = result.data;
+    setlist.songs?.sort((songA, songB) => songA.position - songB.position);
+    return { props: { setlist } };
   } catch (error) {
     return { props: { setlist: null } };
   }
-}
-
-export async function getStaticPaths() {
-  const result = await axios.get(API_URL + '/public_setlists');
-  const setlists = result.data;
-
-  const paths = setlists?.map(setlist => ({
-    params: { id: setlist.public_link },
-  }));
-
-  return { paths, fallback: 'blocking' };
 }
 
 const API_URL = process.env.API_URL;
