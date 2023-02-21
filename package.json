@@ -9,6 +9,7 @@
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
     "axios": "^0.21.1",
+    "chord-transposer": "^3.0.1",
     "next": "latest",
     "react": "^17.0.2",
     "react-alice-carousel": "^2.6.1",
