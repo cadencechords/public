@@ -54,6 +54,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@cadencechords/chord-kit@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@cadencechords/chord-kit/-/chord-kit-1.0.7.tgz#9b1320af95f66cdc97c7e35c50d89fcd8a0ddf9b"
+  integrity sha512-MagloTDkEHKL5uYJthYwWIh6Emza/LjDQrJjuoGZguiqE2aWCtLWuNwcQkvjxUeR5qFvYx0Em8CHr7IAqhV/Vg==
+  dependencies:
+    chord-transposer "^3.0.1"
+    chordsheetjs "^7.16.0"
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
@@ -515,6 +523,13 @@ chord-transposer@^3.0.1:
   dependencies:
     ts-enums "0.0.6"
     xregexp "^4.4.0"
+
+chordsheetjs@^7.16.0:
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/chordsheetjs/-/chordsheetjs-7.16.0.tgz#d1d55d237ed2964f536b4713c358035baaad7fac"
+  integrity sha512-6sDrHYM0n/vjTTUWOVZb0vh/5F8daxNq1mnDw/Af+S0uNKs0XWLE2yhF6Z4LGQ+SeS35t9APtU2SeTnvL8QJvw==
+  dependencies:
+    lodash.get "^4.4.2"
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
@@ -1384,6 +1399,11 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
