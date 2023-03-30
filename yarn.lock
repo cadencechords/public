@@ -54,10 +54,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@cadencechords/chord-kit@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@cadencechords/chord-kit/-/chord-kit-1.0.7.tgz#9b1320af95f66cdc97c7e35c50d89fcd8a0ddf9b"
-  integrity sha512-MagloTDkEHKL5uYJthYwWIh6Emza/LjDQrJjuoGZguiqE2aWCtLWuNwcQkvjxUeR5qFvYx0Em8CHr7IAqhV/Vg==
+"@cadencechords/chord-kit@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@cadencechords/chord-kit/-/chord-kit-1.0.13.tgz#a79b7a91a1dac621bd8e54ca67015f7f108d1c09"
+  integrity sha512-o5YmNhEEWcloKx/GJm3tjWXZRS9uUHpa7r8VvaNeeQOW4YDpLPsWIyGFd5q18Qw1UWwhMzSSDVptPfhY7Lm9mg==
   dependencies:
     chord-transposer "^3.0.1"
     chordsheetjs "^7.16.0"

@@ -6,7 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@cadencechords/chord-kit": "^1.0.7",
+    "@cadencechords/chord-kit": "^1.0.13",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
     "axios": "^0.21.1",
