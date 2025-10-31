@@ -5,7 +5,7 @@ API_URL           = "https://chords-api.herokuapp.com"
 API_URL           = "https://chords-api-dev.herokuapp.com"
 
 [[redirects]]
-  from = "https://app.cadencechords.com/*"
-  to = "https://app.mezzochords.com/:splat"
+  from = "https://public.cadencechords.com/*"
+  to = "https://public.mezzochords.com/:splat"
   status = 301
   force = true
