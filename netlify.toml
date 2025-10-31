@@ -3,3 +3,9 @@ API_URL           = "https://chords-api.herokuapp.com"
 
 [context.dev.environment]
 API_URL           = "https://chords-api-dev.herokuapp.com"
+
+[[redirects]]
+  from = "https://app.cadencechords.com/*"
+  to = "https://app.mezzochords.com/:splat"
+  status = 301
+  force = true
