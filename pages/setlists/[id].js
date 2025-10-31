@@ -14,11 +14,11 @@ export default function Setlist({ setlist }) {
     return (
       <>
         <Head>
-          <title>Songs | Cadence</title>
-          <meta property="og:title" content="Songs | Cadence"></meta>
+          <title>Songs | Mezzo</title>
+          <meta property="og:title" content="Songs | Mezzo"></meta>
           <meta
             property="og:image"
-            content="https://public.cadencechords.com/logo.png"
+            content="https://public.mezzochords.com/logo.png"
           ></meta>
           <meta property="og:image:width" content="579"></meta>
           <meta property="og:image:height" content="773"></meta>

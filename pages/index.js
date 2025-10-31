@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center gap-3 justify-center min-h-screen py-2 max-w-lg mx-auto px-3 md:px-0">
       <Head>
-        <title>Cadence</title>
+        <title>Mezzo</title>
       </Head>
       <form onSubmit={handleLookupSetlist} className="w-full">
         <Input
